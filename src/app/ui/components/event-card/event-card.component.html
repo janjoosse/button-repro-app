@@ -1,24 +1,3 @@
 <div [routerLink]="['/agenda', story.slug]">
-    <div class="app-event-card">
-        <img 
-            class="app-event-card__image" 
-            alt="{{ story.content.images[0].alt }}" 
-            src="{{ story.content.images[0].filename | storyBlokUrl:400 }}" 
-            loading="{{ cardIndex === 0 ? 'eager' : 'lazy' }}"
-        >
-        <div class="app-event-card">
-            <div class="app-event-card__text">
-                <span>{{ story.content.date | appDate }}</span>
-                <span class="app-event-card__text__title">
-                    {{ story.content.title }}
-                </span>
-                <span class="app-event-card__text__summary">
-                    {{ story.content.summary }}
-                </span>
-            </div>
-            <div class="app-event-card__button">
-                Lees meer
-            </div>
-        </div>
-    </div>
+    {{ story.content.title }}
 </div>

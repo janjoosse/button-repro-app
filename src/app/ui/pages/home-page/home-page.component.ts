@@ -17,14 +17,5 @@ export class HomePageComponent {
   homePage = this.contentService.homePage;
   stories = this.contentService.events;
   
-  constructor(private contentService: ContentService) {
-    afterNextRender(() => {
-      const scrollLeft = localStorage?.getItem(scrollLeftKey);
-      document.getElementById(scrollListKey)?.scrollTo({ left: parseInt(scrollLeft ?? '0') });
-    });
-  }
-  
-  onScroll(_: any) {
-    localStorage.setItem(scrollLeftKey, (document.getElementById(scrollListKey)?.scrollLeft ?? 0).toString());
-  }
+  constructor(private contentService: ContentService) {}
 }

@@ -6,11 +6,9 @@
       {{ homePage().headerTextShort }}
     </div>
     <div class="app-home-page__events" id="scroll-list">
-      <br/>
-      @for (event of events; track event.id; let index = $index) {
+      @for (event of events(); track event.id; let index = $index) {
         <a [routerLink]="['/agenda', event.slug]">{{ event.slug }}</a>
       }
-      <br/>
     </div>
     <div class="app-home-page__about">
       <app-rich-text [richText]="homePage().aboutTeaser"></app-rich-text>

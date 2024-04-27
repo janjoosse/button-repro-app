@@ -15,6 +15,12 @@ import { RouterLink } from '@angular/router';
 export class HomePageComponent {
   homePage = this.contentService.homePage;
   stories = this.contentService.events;
+  events = [
+    { slug: 'abc', id: 0, },
+    { slug: 'def', id: 1, },
+    { slug: 'ghi', id: 2, },
+    { slug: 'jkl', id: 3, },
+  ]
   
   constructor(private contentService: ContentService) {}
 }

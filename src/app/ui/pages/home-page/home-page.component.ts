@@ -28,6 +28,7 @@ export class HomePageComponent implements OnInit {
   constructor(private contentService: ContentService) {}
   
   ngOnInit(): void {
+    console.log('ngOnInit homepage');
     this.homePage = this.contentService.homePage;
     this.stories = this.contentService.events;
   }

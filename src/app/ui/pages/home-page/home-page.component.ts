@@ -30,6 +30,5 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.homePage = this.contentService.homePage;
     this.stories = this.contentService.events;
-    throw new Error('Method not implemented.');
   }
 }

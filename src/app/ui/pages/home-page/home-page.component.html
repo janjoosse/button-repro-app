@@ -8,7 +8,7 @@
     <div class="app-home-page__events" id="scroll-list">
       <br/>
       @for (story of stories(); track story.id; let index = $index) {
-        <app-event-card id="{{ story.id }}" [story]="story" [cardIndex]="index"></app-event-card>
+        <a [routerLink]="['/agenda', story.slug]">{{ story.content.title }}</a>
       }
       <br/>
     </div>

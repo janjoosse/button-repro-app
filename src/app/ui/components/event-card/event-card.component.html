@@ -6,17 +6,17 @@
             src="{{ story.content.images[0].filename | storyBlokUrl:400 }}" 
             loading="{{ cardIndex === 0 ? 'eager' : 'lazy' }}"
         >
-        <div class="app-event-card__text-wrapper">
-            <div class="app-event-card__text-wrapper__text">
+        <div class="app-event-card">
+            <div class="app-event-card__text">
                 <span>{{ story.content.date | appDate }}</span>
-                <span class="app-event-card__text-wrapper__text__title">
+                <span class="app-event-card__text__title">
                     {{ story.content.title }}
                 </span>
-                <span class="app-event-card__text-wrapper__text__summary">
+                <span class="app-event-card__text__summary">
                     {{ story.content.summary }}
                 </span>
             </div>
-            <div class="app-event-card__text-wrapper__button">
+            <div class="app-event-card__button">
                 Lees meer
             </div>
         </div>

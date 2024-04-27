@@ -8,51 +8,42 @@
         object-fit: cover;
     }
 
-    &__text-wrapper {
-        padding: 10px;
-        display: flex;
+    &__text {
+        justify-content: start;
+        align-items: start;
+        display: grid;
         gap: 10px;
-        flex-flow: column;
-        justify-content: space-between;
-        height: 100%;
+        text-wrap: wrap;
+        color: $primaryBlue;
 
-        &__text {
-            justify-content: start;
-            align-items: start;
-            display: grid;
-            gap: 10px;
-            text-wrap: wrap;
-            color: $primaryBlue;
-    
-            &__title {
-                font-weight: bold;
-                font-size: 20px;
-            }
-    
-            &__summary {
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-    
-                @supports (-webkit-line-clamp: 4) {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: initial;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 4;
-                    -webkit-box-orient: vertical;
-                }
-            }
-        }
-
-        &__button {
-            width: 40%;
-            padding: 10px;
-            background-color: $primaryRed;
-            border-radius: 20px;
-            color: white;
-            text-align: center;
+        &__title {
             font-weight: bold;
+            font-size: 20px;
         }
+
+        &__summary {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            @supports (-webkit-line-clamp: 4) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: initial;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+
+    &__button {
+        width: 40%;
+        padding: 10px;
+        background-color: $primaryRed;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
     }
 }

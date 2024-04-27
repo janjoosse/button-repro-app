@@ -1,8 +1,11 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, WritableSignal, signal } from '@angular/core';
 import { ContentService } from '../../../core/services/content.service';
 import { EventCardComponent } from '../../components/event-card/event-card.component';
 import { RichTextComponent } from '../../components/rich-text/rich-text.component';
 import { RouterLink } from '@angular/router';
+import { HomePage } from '../../../core/models/home-page';
+import { Story } from '../../../core/models/story';
+import { Event } from '../../../core/models/event';
 
 @Component({
   selector: 'app-home-page',
@@ -12,9 +15,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePageComponent {
-  homePage = this.contentService.homePage;
-  stories = this.contentService.events;
+export class HomePageComponent implements OnInit {
+  homePage?: WritableSignal<HomePage>;
+  stories?: WritableSignal<Story<Event>[]>;
   events = signal([
     { slug: 'abc', id: 0, },
     { slug: 'def', id: 1, },
@@ -23,4 +26,10 @@ export class HomePageComponent {
   ]);
   
   constructor(private contentService: ContentService) {}
+  
+  ngOnInit(): void {
+    this.homePage = this.contentService.homePage;
+    this.stories = this.contentService.events;
+    throw new Error('Method not implemented.');
+  }
 }

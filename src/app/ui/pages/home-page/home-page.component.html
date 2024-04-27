@@ -1,18 +1,18 @@
 <div class="app-home-page">
     @if (homePage && stories) {
       <div class="app-home-page__header">
-        {{ homePage().headerText }}
+        {{ homePage.headerText }}
       </div>
       <div class="app-home-page__header-short">
-        {{ homePage().headerTextShort }}
+        {{ homePage.headerTextShort }}
       </div>
       <div class="app-home-page__events" id="scroll-list">
-        @for (story of stories(); track story.id; let index = $index) {
+        @for (story of stories; track story.id; let index = $index) {
           <a [routerLink]="['/agenda', story.slug]">{{ story.slug }}</a>
         }
       </div>
       <div class="app-home-page__about">
-        <app-rich-text [richText]="homePage().aboutTeaser"></app-rich-text>
+        <app-rich-text [richText]="homePage.aboutTeaser"></app-rich-text>
       </div>
     }
   </div>

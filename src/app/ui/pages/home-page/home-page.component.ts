@@ -16,8 +16,8 @@ import { Event } from '../../../core/models/event';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent implements OnInit {
-  homePage?: WritableSignal<HomePage>;
-  stories?: WritableSignal<Story<Event>[]>;
+  homePage?: HomePage;
+  stories?: Story<Event>[];
   events = signal([
     { slug: 'abc', id: 0, },
     { slug: 'def', id: 1, },
@@ -29,7 +29,7 @@ export class HomePageComponent implements OnInit {
   
   ngOnInit(): void {
     console.log('ngOnInit homepage');
-    this.homePage = this.contentService.homePage;
-    this.stories = this.contentService.events;
+    this.homePage = this.contentService.homePage();
+    this.stories = this.contentService.events();
   }
 }

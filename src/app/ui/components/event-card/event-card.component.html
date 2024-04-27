@@ -1,3 +1,5 @@
-<div [routerLink]="['/agenda', story.slug]">
-    {{ story.content.title }}
-</div>
+@if (story) {
+    <div [routerLink]="['/agenda', story.slug]">
+        {{ story.content.title }}
+    </div>
+}

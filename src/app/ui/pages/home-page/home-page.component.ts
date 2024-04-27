@@ -29,7 +29,7 @@ export class HomePageComponent implements OnInit {
   
   ngOnInit(): void {
     console.log('ngOnInit homepage');
-    this.homePage = this.contentService.homePage();
-    this.stories = this.contentService.events();
+    this.homePage = this.contentService.homePage;
+    this.stories = this.contentService.events;
   }
 }

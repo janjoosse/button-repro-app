@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecondPageComponent } from './second-page.component';
+import { RichTextComponent } from './rich-text.component';
 
-describe('SecondPageComponent', () => {
-  let component: SecondPageComponent;
-  let fixture: ComponentFixture<SecondPageComponent>;
+describe('RichTextComponent', () => {
+  let component: RichTextComponent;
+  let fixture: ComponentFixture<RichTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SecondPageComponent]
+      imports: [RichTextComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SecondPageComponent);
+    fixture = TestBed.createComponent(RichTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

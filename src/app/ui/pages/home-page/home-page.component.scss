@@ -1,0 +1,50 @@
+@import 'variables';
+
+.app-home-page {
+    display: grid;
+    gap: $space-default;
+    @media (width <= 600px) {
+        gap: $space-default-mobile;
+    }
+
+    &__header {
+        padding: $space-default $space-default 0 $space-default;
+        text-align: center;
+        @media (width <= 600px) {
+            display: none;
+        }
+    }
+    
+    &__header-short {
+        display: none; 
+        @media (width <= 600px) {
+            display: block;
+            text-align: center;
+            padding: $space-default-mobile $space-default-mobile * 2 0 $space-default-mobile * 2;
+        }
+    }
+
+    &__events {
+        overflow-y: hidden;
+        display: flex;
+        gap: $space-default;
+        padding: 0 $space-default;
+        @media (width <= 600px) {
+            gap: $space-default-mobile;
+            padding: 0 $space-default-mobile;
+        }
+    }
+
+    &__about {
+        margin: 0 $space-default $space-default $space-default;
+        padding: $space-default;
+        border-radius: $space-default;
+        text-align: center;
+        background-color: $secondaryYellow;
+        @media (width <= 600px) {
+            margin: 0 $space-default-mobile $space-default-mobile $space-default-mobile;
+            padding: $space-default-mobile;
+            border-radius: $space-default-mobile;
+        }
+    }
+}

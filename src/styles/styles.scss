@@ -1,0 +1,13 @@
+@import 'variables';
+
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Comfortaa';
+    line-height: 1.4;
+}
+
+body {
+    margin: 0;
+    color: $primaryBlue;
+}
+

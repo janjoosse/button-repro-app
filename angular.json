@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "button-repro-app": {
+    "bergharen_klassiek": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/button-repro-app",
+            "outputPath": "dist/bergharen_klassiek",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,14 +27,21 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/robots.txt"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@fortawesome/fontawesome-svg-core/styles.css",
+              "src/styles/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "ssr": {
               "entry": "server.ts"
             }
@@ -67,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "button-repro-app:build:production"
+              "buildTarget": "bergharen_klassiek:build:production"
             },
             "development": {
-              "buildTarget": "button-repro-app:build:development"
+              "buildTarget": "bergharen_klassiek:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "button-repro-app:build"
+            "buildTarget": "bergharen_klassiek:build"
           }
         },
         "test": {
@@ -95,12 +102,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@fortawesome/fontawesome-svg-core/styles.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "644d588b-a93c-4139-ace9-e52124bee6b8"
   }
 }

@@ -1,21 +1,6 @@
 @import 'variables';
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
 .app-event-card {
-    border-radius: 20px;
-    background-color: $secondaryPink;
-    width: 300px;
-    display: flex;
-    flex-flow: column;
-    grid-template-columns: 1fr;
-    text-wrap: balance;
-    overflow: hidden;
-    border: 1px white solid;
-    
     &__image {
         width: 100%;
         height: 180px;
